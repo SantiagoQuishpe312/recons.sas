@@ -1,0 +1,227 @@
+// Variables de colores y fuentes
+$primary-color: #FF7335; // Azul
+$secondary-color: white; // Gris oscuro
+$highlight-color: #F59E0B; // Naranja
+$background-color: rgba(0, 0, 0, 0.05); // Fondo transparente con un toque sutil
+
+$font-family: 'Arial', sans-serif;
+
+// Estilos generales
+body {
+  font-family: $font-family;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #333;
+}
+
+h1, h2, h3 {
+  color: #1F2937;
+  font-weight: bold;
+}
+
+// Título principal
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: $primary-color;
+}
+
+// Formulario de contacto
+form {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  width: 50%;
+margin-left: 25%;
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+
+  label {
+    font-size: 1rem;
+    color: $secondary-color;
+    margin-bottom: 0.5rem;
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #D1D5DB;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+    
+    &:focus {
+      border-color: $primary-color;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+    }
+  }
+
+  button {
+    background-color: $highlight-color;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    border: none;
+    font-size: 1.125rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    
+    &:hover {
+      background-color: darken($highlight-color, 10%);
+      transform: translateY(-3px);
+    }
+  }
+}
+
+// Información de contacto
+.contact-info {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .info-text {
+    font-size: 1.125rem;
+    color: $secondary-color;
+    margin-bottom: 0.5rem;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: $secondary-color;
+
+    a {
+      transition: color 0.3s ease, transform 0.3s ease;
+      
+      &:hover {
+        color: $primary-color;
+        transform: translateY(-3px);
+      }
+    }
+  }
+}
+
+// Mapa
+.map-container {
+  width: 100%;
+  height: 400px;
+  margin-top: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    border: none;
+  }
+}
+
+// Responsividad
+@media (max-width: 768px) {
+  .contact-info {
+    padding: 1rem;
+  }
+
+  form {
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .social-icons {
+    font-size: 1.25rem;
+    gap: 1rem;
+  }
+}
+
+// Información de contacto
+.contact-info {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+  
+    h2 {
+      font-size: 1.5rem;
+      color: #1F2937;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+  
+    p {
+      font-size: 1rem;
+      color: #6B7280;
+      margin: 0.5rem 0;
+    }
+  
+    .address,
+    .phone,
+    .email {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  
+    .address {
+      color: #4A90E2;
+    }
+  
+    .phone {
+      color: #F59E0B;
+    }
+  
+    .email {
+      color: #10B981;
+    }
+  }
+  
+  // Redes sociales
+  .social-links {
+    margin-top: 2rem;
+    
+    h3 {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: #1F2937;
+      margin-bottom: 1rem;
+    }
+  
+    .social-icons {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      color: #4B5563;
+      transition: transform 0.3s ease, color 0.3s ease;
+  
+      a {
+        display: inline-block;
+        font-size: 1.75rem;
+        color: inherit;
+        transition: color 0.3s ease, transform 0.3s ease;
+  
+        &:hover {
+          color: #1E40AF;
+          transform: translateY(-5px);
+        }
+      }
+    }
+  }
+  

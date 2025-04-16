@@ -1,0 +1,56 @@
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  
+    .whatsapp-btn {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #25d366;
+      border-radius: 50%;
+      width: 56px;
+      height: 56px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s ease;
+  
+      img {
+        width: 32px;
+        height: 32px;
+      }
+  
+      &:hover {
+        transform: scale(1.1);
+      }
+  
+      .whatsapp-message {
+        position: absolute;
+        right: 70px;
+        background-color: #25d366;
+        color: white;
+        padding: 0.6rem 0.9rem;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        white-space: nowrap;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        opacity: 0;
+        transform: translateX(10px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        pointer-events: none;
+      }
+  
+      &:hover .whatsapp-message {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  
+    @media (max-width: 600px) {
+      .whatsapp-message {
+        display: none !important;
+      }
+    }
+  }
+  

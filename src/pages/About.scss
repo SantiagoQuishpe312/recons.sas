@@ -1,0 +1,237 @@
+.about {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .about__hero {
+    background-image: url('../assets/img/foto-fondo-equipo.jpg');
+    filter: opacity(0.7);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+
+    .about__hero-content {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 2rem;
+      border-radius: 1rem;
+      max-width: 800px;
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+      }
+    }
+  }
+
+  .about__content {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .text__section {
+      p{
+        color: #ffffff;
+      }}
+    .about__section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 3rem;
+      h2{
+        color:#FF7335;
+      }
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+
+      .about__image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+
+        img {
+          width: 100%;
+          max-width: 450px;
+          border-radius: 0.75rem;
+          object-fit: cover;
+          box-shadow: -10px 10px 30px rgba(255, 115, 53, 0.5);
+          transition: transform 0.3s ease;
+
+          &:hover {
+            transform: scale(1.02);
+          }
+        }
+      }
+
+      .about__text {
+        flex: 1;
+
+        h2 {
+          font-size: 2rem;
+          color: #FF7335;
+          margin-bottom: 1rem;
+        }
+
+        p {
+          font-size: 1.1rem;
+          line-height: 1.7;
+          color: #ffffff;
+          text-align: justify;
+        }
+
+        strong {
+          color: #FF7335;
+        }
+
+        em {
+          display: block;
+          margin-top: 1rem;
+          font-style: italic;
+          color: #4a5568;
+        }
+      }
+    }
+
+    .logos-grid {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+
+        img {
+          max-width: 150px;
+          height: auto;
+          transition: transform 0.3s ease;
+          background-color: #ffe9e0;
+        border-radius: 20px;
+          &:hover {
+            transform: scale(1.05);
+            filter: none;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .about__hero {
+      height: auto;
+      padding: 2rem 1rem;
+
+      .about__hero-content {
+        h1 {
+          font-size: 2rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .about__content {
+      padding: 2rem 1rem;
+    }
+
+    .about__section {
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+.about__mission {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .about__mission-content {
+    background: linear-gradient(145deg, #ffe9e0, #ffffff);
+    border-left: 6px solid #FF7335;
+    padding: 2.5rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(255, 115, 53, 0.2);
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #FF7335;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.15rem;
+      color: #333;
+      line-height: 1.75;
+    }
+  }
+
+  .btn-mission {
+    display: inline-block;
+    margin-top: 2rem;
+    background-color: #FF7335;
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+      background-color: #e85c1e;
+      transform: scale(1.05);
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .about__mission-content {
+      padding: 2rem 1.5rem;
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}

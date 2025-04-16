@@ -1,0 +1,113 @@
+/* Navbar.scss */
+
+/* Estilo general para el navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    padding: 0rem;
+    display: flex;
+    justify-content: space-between; /* Espacio entre logo y menú */
+    align-items: center;
+    background-color: transparent; /* Transparente inicialmente */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    
+  }
+  
+  .navbar.scrolled {
+    background-color:  #bb8d8d; /* Cambiar fondo cuando se hace scroll */
+    opacity: 0.9; /* Ajustar la opacidad cuando se hace scroll */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra cuando se hace scroll */
+  }
+  
+  /* Contenedor del navbar */
+  .navbar__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  
+  /* Estilo para el logo */
+  .navbar__logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 010px;
+  }
+  
+  .navbar__logo .logo-img {
+    width: 50px; /* Ajusta el tamaño del logo */
+    height: auto;
+    margin-right: 1rem; /* Espacio a la derecha del logo */
+  }
+  
+  /* Estilo para el menú */
+  .navbar__menu {
+    display: flex;
+    gap: 1.5rem; /* Espaciado entre los elementos del menú */
+  }
+  
+  .navbar__menu li {
+    list-style: none;
+  }
+  
+  .navbar__menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar__menu li a:hover {
+    color: #FF7335;
+  }
+  
+  /* Estilos para el menú hamburguesa */
+  .navbar__hamburger {
+    display: none;
+    cursor: pointer;
+    margin-left: auto;
+  }
+  
+  
+  .navbar__hamburger.open {
+    display: block;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar__menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color:  #2F2F2F ;
+      opacity: 0.9;
+      padding: 1rem;
+      gap: 1rem;
+      z-index: 40;
+    }
+  
+    .navbar__menu.open {
+      display: flex;
+    }
+  
+    .navbar__hamburger {
+      display: block;
+    }
+  
+    .navbar__menu li {
+      text-align: left;
+    }
+  }
